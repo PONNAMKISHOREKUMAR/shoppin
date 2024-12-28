@@ -1,24 +1,11 @@
 import React, { Component } from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-import './index.css';
+
+
+import './index.css'
 
 class WatchCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedWatch: null, 
-    };
-  }
-
-  handleWatchClick = (watch) => {
-    this.setState({ selectedWatch: watch });
-  };
-
   render() {
-    const { selectedWatch } = this.state;
-
     const watchCategories = [
       {
           type: "Silver Aluminum",
@@ -82,7 +69,7 @@ class WatchCard extends Component {
       },
       {
           type: "Silver Aluminum",
-          imageUrl: "https://res.cloudinary.com/da3mrj5uf/image/upload/v1735356634/Apple-Watch-Nike-Series-4-Silver-44mm-GPS-CEL_hvavgo.jpg",
+          imageUrl: "https://res.cloudinary.com/da3mrj5uf/image/upload/v1735284197/51IlGni9GWL._SL1000__iwyibg.jpg",
           description: "A lightweight, athletic design with a polished silver aluminum finish, tailored for an active lifestyle.",
           price: "$399"
       },
@@ -113,36 +100,23 @@ class WatchCard extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-          },
+          }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-          },
-        },
-      ],
+          }
+        }
+      ]
     };
-
-    if (selectedWatch) {
-      // Display only the selected watch details
-      return (
-        <div className="watch-details">
-          <img src={selectedWatch.imageUrl} alt={selectedWatch.type} />
-          <h3>{selectedWatch.type}</h3>
-          <p>{selectedWatch.description}</p>
-          <p>{selectedWatch.price}</p>
-          <button onClick={() => this.setState({ selectedWatch: null })}>Back to Carousel</button>
-        </div>
-      );
-    }
 
     return (
       <div className="watch-card-container">
         <Slider {...settings}>
           {watchCategories.map((watch, index) => (
-            <div key={index} className="watch-card" onClick={() => this.handleWatchClick(watch)}>
+            <div key={index} className="watch-card">
               <img src={watch.imageUrl} alt={watch.type} />
               <h3>{watch.type}</h3>
               <p>{watch.description}</p>
