@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* WatchCard container styles */
+.watch-card-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* WatchCard styles */
+.watch-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideUp 0.5s forwards;
+}
+
+.watch-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.watch-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+.watch-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+.watch-card .price {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeInText 2.5s ease-in-out forwards;
+}
+
+/* Hover effect */
+.watch-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* React Slick Carousel Styles */
+.slick-prev, .slick-next {
+  z-index: 1;
+  color: #333;
+  font-size: 30px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+}
+
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -40px;
+}
+
+/* Carousel Dots */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .watch-card-container {
+    width: 95%;
+  }
+
+  .watch-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .watch-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .watch-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .watch-card p {
+    font-size: 0.8rem;
+  }
+
+  .watch-card .price {
+    font-size: 1rem;
+  }
+
+  /* Watch card image responsive */
+  .watch-card img {
+    height: auto;
+  }
+}
+
+/* Watch Details Section Styles */
+.watch-details {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.watch-details img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Optional: adjust based on design */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.watch-details h3,
+.watch-details p {
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+.watch-details button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.watch-details button:hover {
+  background-color: #555;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

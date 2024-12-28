@@ -1,0 +1,98 @@
+/* Homepage General Styles */
+.homepage {
+  text-align: center;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+.header-cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* For screens smaller than 768px (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Button Container */
+.buttons {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #0071e3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button Hover Effects */
+.button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Button Active State */
+.button:active {
+  background-color: #00478c;
+  transform: scale(1);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage {
+    padding: 30px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+
+
+.carousel-cont{
+  margin: 20px;
+}

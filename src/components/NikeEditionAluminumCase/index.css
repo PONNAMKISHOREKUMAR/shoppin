@@ -1,0 +1,118 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Container for the cases */
+.case-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Styling for each case item */
+.case-item {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Hover effect for case items */
+.case-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.case-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for image */
+.case-item:hover .case-image {
+  transform: scale(1.05);
+}
+
+/* Title styling */
+.case-item h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.2em;
+  color: #28a745;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for title and price */
+.case-item:hover h2,
+.case-item:hover .price {
+  color: #0071e3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .case-item {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-item {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-item {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

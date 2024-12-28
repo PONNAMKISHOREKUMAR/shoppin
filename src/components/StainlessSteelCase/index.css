@@ -1,0 +1,91 @@
+/* Stainless Steel Case Page */
+.stainless-steel-case-page {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Product grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Product card styling */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image styling */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for product image */
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Product price styling */
+.product-price {
+  font-weight: bold;
+  color: #0071e3;
+  font-size: 1.2em;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for product price */
+.product-card:hover .product-price {
+  color: #28a745;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .product-card {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    max-width: 100%;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
